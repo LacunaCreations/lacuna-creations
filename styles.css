@@ -1,0 +1,217 @@
+/* ====================================== */
+/* GLOBAL */
+/* ====================================== */
+/* Colors */
+:root {
+    --black: #000;
+    --white: #fff;
+    --green: #;
+    --blue: #;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--black);
+    color: var(--white);
+}
+.container {
+    padding: 0px 10rem;
+}
+.section-title {
+    padding-left: 10rem;
+}
+
+/* ====================================== */
+/* HEADER */
+/* ====================================== */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+}
+.header-right {
+    flex: 1;
+}
+.header-right ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+}
+.header-right ul a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* ====================================== */
+/* HERO */
+/* ====================================== */
+.hero {
+    margin-top: 5rem;
+}
+.hero-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 500px;
+}
+.hero-right {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(33, 33, 33);
+}
+.hero-left {
+    flex: 1;
+    padding: 5rem 10rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ====================================== */
+/* ABOUT */
+/* ====================================== */
+.about {
+    margin-top: -100px;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-right {
+    flex: 1;
+    padding: 5rem 10rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+}
+.about-left {
+    flex: 1;
+}
+
+/* ====================================== */
+/* SERVICES */
+/* ====================================== */
+.services {
+    margin-top: 5rem;
+}
+.services-content {
+    display: flex;
+}
+.service {
+    height: 100%;
+}
+.services-left {
+    flex: 1;
+    padding: 5rem 5rem 5rem 10rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+}
+.services-mid {
+    flex: 1;
+    padding: 5rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    margin: 10rem 0rem 0rem -5rem;
+}
+.services-right {
+    flex: 1;
+    padding: 5rem 10rem 5rem 5rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    margin-left: 5rem;
+}
+
+/* ====================================== */
+/* LEADERSHIP */
+/* ====================================== */
+.leadership {
+    margin-top: 5rem;
+    position: relative;
+}
+.leadership-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+.card {
+    background: rgb(33, 33, 33);
+    padding: 2rem;
+}
+.card img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.about-leader {
+    padding-top: 2rem;
+}
+.leadership-left {
+    margin-right: 2rem;
+}
+.leadership-right {
+    margin-left: 2rem;
+}
+.lead-card-left {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    padding: 2rem 2rem 2rem 10rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+}
+.lead-card-left p, h2 {
+    margin: 0;
+    padding: 0;
+}
+.lead-card-right {
+    position: absolute;
+    top: 43%;
+    right: 0;
+    padding: 2rem 10rem 2rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+}
+.lead-card-right p, h2 {
+    margin: 0;
+    padding: 0;
+}
+.lead-icons {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.lead-icons i {
+    padding: 0 1rem;
+}
+
+
+
