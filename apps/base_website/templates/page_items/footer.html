@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'base_website/css/footer.css' %}">
+
+  <title>Footer</title>
+  
+</head>
+<body>
+  <div class="contact-container">
+
+    <div class="contact-top-text">
+      <p>Schedule A Call</p>
+      <h1>Let's Talk Goals</h1>
+    </div>
+
+    <div class="contact-items">
+      <div class="contact-column">
+        <div class="contact-form">
+          <h2>We Just Need Some Info</h2>
+          <form action="contact-message" method="POST">
+            {% csrf_token %}  
+            <input type="text" placeholder="Name" name="name"><br>
+            <input type="text" placeholder="Email" name="email"><br>
+            <input type="text" placeholder="Phone Number" name="phone"><br>
+            <input type="text" placeholder="Subject" name="message"><br>
+
+            <button type="submit"><i class="fa fa-regular fa-paper-plane"></i>Let's Talk</button>
+          </form>
+        </div>
+      </div>
+      <div class="contact-column">
+        <div class="contact-information">
+          <h2>Contact Us</h2>
+          <p>P // 505 - 414 - 1917</p>
+          <p>E // Contact@LacunaCreations.com</p>
+          <div class="social-media-icons">
+            <h1>
+              <a href="https://www.facebook.com/TheLacunacreations/" target="_blank"><i class="fa fa-brands fa-facebook"></i></a>
+              <a href="https://twitter.com/LacunaCreations" target="_blank"><i class="fa fa-brands fa-twitter"></i></a>
+              <i class="fa fa-brands fa-instagram"></i>
+            </h1>
+          </div>
+          <button>Careers</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-container">
+    <p>[ ©2022 All Rights Reserved | Lacuna Creations LLC | <a href="/admin/login"><i class="fas fa-user-shield"></i></a> ]</p>
+  </div>
+</body>
+</html>

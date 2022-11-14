@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'base_website/css/team.css' %}">
+  
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Team</title>
+</head>
+<body>
+  <div class="container">
+
+    <!-- MENU -->
+    {% include 'page_items/menu.html' %}
+
+
+    {% if messages %}
+      <div class="success_message">
+        <p>One of our developers will get back with you shortly</p>
+      </div>
+    {% endif %}
+
+    <div class="top-element">
+      <h1>Our Goal</h1>
+    </div>
+
+    <div class="goal-element">
+      <p>
+        We are a digital product agency that solves all web development related challenges of the client on a turnkey basis with a team of brilliant minds.
+        <br>
+        <br>
+
+        We care about what we do and who we collaborate with. Our product-oriented team is willing to take on your most complex challenges without the hassle of micromanagement. All for the purpose to create stunning user experiences for your customers and drive the full business potential.
+        <br>
+        <br>
+
+        We do not work for the client but we work with the client. Our team is compiled of exceptionally talented people who are eager to jump onto your challenge as their own, generate a myriad of possible solutions and deliver the most suitable outcomes for your business objectives.
+        <br>
+        <br>
+
+        You have a challenge, we find a ready-to-operate solution for you.
+      </p>
+    </div>
+    <div class="team-element">
+      <h1>Our Team</h1>
+      <p>
+        Each teammate is a perfect reflection of our corporate values. You can always count on open communication, responsible execution, innovative approach, and inspiring dedication towards your business goals.
+        <br>
+        <br>
+
+        We are not obsessed nor limited by a specific technological stack. The client's task is at the forefront and our people know exactly which tools and skills are necessary for translating your business value into a quality digital product.
+        <br>
+        <br>
+
+        Every team member adds a new perspective to the collective enterprise and contributes to both our company growth and clients' business success. So we are keen to introduce them to you.
+      </p>
+    </div>
+    <div class="bottom-element">
+      <div class="leaders">
+        <div class="leader left">
+          <h1>Jacob</h1>
+          <p>Co-Founder<br>Lead Developer</p>
+          <div class="socials">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <div class="leader right">
+          <h1>Zack</h1>
+          <p>Co-Founder<br>Lead Designer</p>
+          <div class="socials">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    {% include 'page_items/footer.html' %}
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="{% static 'base_website/js/global.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+.top-element {
+  text-align: center;
+  padding: 50px;
+  background-color: #303030;
+}
+.goal-element {
+  text-align: center;
+  width: 750px;
+  padding: 100px 0;
+}
+
+.team-element {
+  text-align: center;
+  width: 750px;
+  padding: 100px 0;
+}
+
+.bottom-element {
+  text-align: center;
+  width: 100%;
+  padding: 100px 0;
+  margin: 100px 0;
+  background-color: #71c17a;
+}
+
+.leaders {
+  display: flex;
+  width: 50%;
+}
+
+.socials {
+  padding: 25px;
+}
+.socials a {
+  font-size: 22px;
+  padding: 10px;
+  transition: 0.2s;
+}
+.socials a:hover {
+  color: #222222;
+  transition: 0.2s;
+}
