@@ -13,6 +13,9 @@ def index (request):
   return render(request, 'dev-index.html')
   # return render(request, 'index.html')
 
+def home_page (request):
+  return render(request, 'index.html')
+
 def team_page (request):
   return render(request, 'team.html')
 
