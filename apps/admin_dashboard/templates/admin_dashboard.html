@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/admin_dashboard.css' %}">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Lacuna Creations | Admin Dashboard</title>
+</head>
+<body>
+  <div class="container">
+
+    {% include 'admin_page_items/admin_side_menu.html' %}
+
+    <div class="right-container">
+      <h1>Dashboard</h1>
+
+      <!-- TOP SECTION -->
+      <div class="dashboard-top-section">
+        <a href="" id="main" >
+          <div class="dashboard-top-section-items">
+            <p>My Projects</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="dashboard-top-section-items">
+            <p>Messages</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="dashboard-top-section-items">
+            <p>Notes</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- CALENDAR -->
+      <div class="analytics">
+        <p>CALENDAR HERE</p>
+      </div>
+
+      <!-- NEWS AND HELP -->
+      <div class="lacuna-help">
+        <a href="">
+          <div class="help-section-items">
+            <p>Lacuna News</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="help-section-items">
+            <p>Schedule A Meeting</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- PAYCHECK -->
+      <div class="paycheck">
+        <a href="">
+          <div class="paycheck-section-items">
+            <p>View My Paystub</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

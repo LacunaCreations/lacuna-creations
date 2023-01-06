@@ -1,0 +1,60 @@
+.right-container {
+  margin-left: 325px;
+  margin-top: 25px;
+  text-align: center;
+}
+.project-top-section {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.project-top-section a {
+  flex: 40%;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  padding: 50px 0;
+  text-align: center;
+  background-color: #222222;
+  color: white;
+  border-radius: 25px;
+
+  transition: 0.2s;
+}
+.project-top-section a:hover {
+  background: #71c17a;
+  transition: 0.2s;
+}
+
+.website-section {
+  margin-right: 25px;
+}
+.website-section-item table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  border-collapse: collapse;
+}
+.website-section-item th {
+  border-bottom: 2px solid #222222;
+  padding: 10px;
+}
+.website-section-item td {
+  border-bottom: 2px solid #c2c2c2;
+  padding: 10px;
+}
+.website-section-item table .fas {
+  padding: 0px 7px;
+  transition: 0.2s;
+}
+.website-section-item table .fas:hover {
+  color: #71c17a;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.website-section-item table .trash:hover {
+  color: rgb(223, 75, 75);
+  cursor: pointer;
+  transition: 0.2s;
+}

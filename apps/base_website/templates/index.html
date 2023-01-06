@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'base_website/css/index.css' %}">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Lacuna Creations</title>  
+
+</head>
+<body>
+  <div class="container">
+
+    <!-- MENU -->
+    {% include 'page_items/menu.html' %}
+
+    {% if messages %}
+      {% for m in messages %}
+        <div class="success_message">
+          <h2>Form Submitted</h2>
+          <p>One of our developers will get back with you shortly</p>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <!-- MAIN SLIDER -->
+    <div class="main-content">
+      <div class="main-content-left">
+        <h1>Your last web & design development partner</h1>
+        <p>We are product developers, advisors and engineers solving business challenges via creating future-ready apps, websites and digital solutions.</p>
+      </div>
+      <div class="main-content-right">
+        {% include 'test/code_animation.html' %}
+      </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div class="portfolio-container">
+      <div class="portolio-content">
+
+        <div class="portfolio-top-text">
+          <p>Explore Our</p>
+          <h1>Projects</h1>
+          <a href="">View All <i class="far fa-arrow-alt-circle-right"></i></a>
+        </div>
+
+        <div class="portfolio-items">
+          <div class="portfolio-item-project">
+            <span>
+              <h1><i class="fab fa-python"></i></h1>
+              <h2>Nomadic Supply Co</h2>
+              <p>Python / Django</p>
+            </span>
+          </div>
+          <div class="portfolio-item-project">
+            <span>
+              <h1><i class="fab fa-react"></i></h1>
+              <h2>Black List</h2>
+              <p>React</p>
+            </span>
+          </div>
+          <div class="portfolio-item-project">
+            <span>
+              <h2><i class="fab fa-angular"></i></h2>
+              <h2>Pass Cloud</h2>
+              <p>Angular</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="services-container">
+      <div class="services-content">
+
+        <div class="services-top-text">
+          <p>Check out our</p>
+          <h1>serveces</h1>
+          <a href="">View All <i class="far fa-arrow-alt-circle-right"></i></a>
+
+        </div>
+        
+        <div class="services-items">
+          <div class="service-column">
+            <div class="service-item">
+              <h1><i class="fa fa-solid fa-laptop-code"></i></h1>
+              <h2>Website Development</h2>
+              <p>Excite your customers with the aesthetic look and feel of your web solution. We build websites and platforms of great performance and beautiful design to present your business value best</p>
+            </div>
+            <div class="service-item">
+              <h1><i class="far fa-object-ungroup"></i></h1>
+              <h2>UX / UI Design</h2>
+              <p>Excite your customers with the aesthetic look and feel of your web solution. We build websites and platforms of great performance and beautiful design to present your business value best</p>
+            </div>
+          </div>
+
+          <div class="service-column">
+            <div class="service-item">
+              <h1><i class="fas fa-pencil-alt"></i></h1>
+              <h2>Graphic Design</h2>
+              <p>Put the perfect brain into your digital product. We implement the most complex solution architecture to establish teh foundation of an effecient, performant, and scalable digital solution.</p>
+            </div>
+
+            <div class="service-item">
+              <h1><i class="fas fa-camera"></i></h1>
+              <h2>Photography</h2>
+              <p>Excite your customers with the aesthetic look and feel of your web solution. We build websites and platforms of great performance and beautiful design to present your business value best</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MEET THE TEAM -->
+    <div class="team">
+      <button>
+        <h1>
+          Meet The Team
+        </h1>
+      </button>
+    </div>
+
+    <!-- FOOTER -->
+    {% include 'page_items/footer.html' %}
+
+
+
+
+
+    <!-- menu -->
+    <!-- <div class="menu">
+      <p>menu</p>
+    </div> -->
+
+    <!-- hero -->
+    <!-- <div class="hero">
+      <p>hero</p>
+    </div> -->
+
+    <!-- about -->
+    <!-- <div class="about">
+      <p>about</p>
+    </div> -->
+
+    <!-- services -->
+    <!-- <div class="services">
+      <p>services</p>
+    </div> -->
+
+    <!-- leadership -->
+    <!-- <div class="leadership">
+      <p>leadership</p>
+    </div> -->
+
+    <!-- contact -->
+    <!-- <div class="contact">
+      <p>contact</p>
+    </div> -->
+
+
+
+
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="{% static 'base_website/js/global.js' %}"></script>
+
+</body>
+</html>

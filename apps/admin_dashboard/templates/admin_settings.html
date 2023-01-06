@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/admin_settings.css' %}">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Lacuna Creations | Admin Settings</title>
+</head>
+<body>
+  <div class="container">
+
+    {% include 'admin_page_items/admin_side_menu.html' %}
+
+    <div class="right-container">
+      <h1>Admin Settings</h1>
+
+      <!-- TOP SECTION -->
+      <div class="settings-top-section">
+        <a href="/admin/admin-profile-update" id="main" >
+          <div class="settings-top-section-items">
+            <p>Profile</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="settings-top-section-items">
+            <p>Employees</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="settings-top-section-items">
+            <p>Projects</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="settings-top-section-items">
+            <p>Clients</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="settings-top-section-items">
+            <p>Paychecks</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="settings-top-section-items">
+            <p>Notifications</p>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+
+</body>
+</html>

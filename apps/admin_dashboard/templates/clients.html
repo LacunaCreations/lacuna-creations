@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/projects.css' %}">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Lacuna Creations | Clients</title>
+</head>
+<body>
+  <div class="container">
+
+    {% include 'admin_page_items/admin_side_menu.html' %}
+
+    <div class="right-container">
+      <h1>Clients</h1>
+      
+      <!-- TOP BUTTONS -->
+      <div class="project-top-section">
+        <a href="">
+          <div class="project-top-section-items">
+            <p>Create New</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="project-top-section-items">
+            <p>Completed</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- WEBSITE PROJECTS -->
+      <div class="website-section">
+        <div class="website-section-item">
+          <table>
+            <tr id="top">
+              <th><h4>Project Name</h4></th>
+              <th><h4>Client</h4></th>
+              <th><h4>Company</h4></th>
+              <th><h4>Services</h4></th>
+              <th><h4>Manage</h4></th>
+            </tr>
+            <tr>
+              <td><p>Lacuna Website</p></td>
+              <td><p>Jacob Moore</p></td>
+              <td><p>Lacuna Creations</p></td>
+              <td><p>Web Dev, Web Management</p></td>
+              <td><i class="fas fa-clipboard"></i><i class="fas fa-cog"></i><i class="fas trash fa-trash-alt"></i></td>
+            </tr>
+            <tr>
+              <td><p>Taos Gravel Photoshoot</p></td>
+              <td><p>Claire Moore</p></td>
+              <td><p>Taos Gravel</p></td>
+              <td><p>Photography</p></td>
+              <td><i class="fas fa-clipboard"></i><i class="fas fa-cog"></i><i class="fas trash fa-trash-alt"></i></td>
+            </tr>
+            <tr>
+              <td><p>Nomadic Website & logo</p></td>
+              <td><p>Zack Rodger</p></td>
+              <td><p>Nomadic Supply Co</p></td>
+              <td><p>Web Dev, Graphic Design</p></td>
+              <td><i class="fas fa-clipboard"></i><i class="fas fa-cog"></i><i class="fas trash fa-trash-alt"></i></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+  
+
+    </div>
+  </div>
+
+</body>
+</html>

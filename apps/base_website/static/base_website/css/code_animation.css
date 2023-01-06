@@ -1,0 +1,33 @@
+.code-animation {
+  width: 20rem;
+  height: 20rem;
+}
+
+.code-animation .lines path {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+}
+
+.code-animation.animating .lines path {
+  animation: coding 350ms ease-out forwards;
+}
+
+@keyframes coding {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.select-all {
+  display: none;
+}
+.dark-mode .code-animation-bg {
+  padding: 30px 0px;
+  background-color: white;
+  border-radius: 25px;
+}
+.code-animation-bg {
+  padding: 30px 0px;
+  background-color: #222222;
+  border-radius: 25px;
+}

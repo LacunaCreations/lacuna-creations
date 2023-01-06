@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/admin_registration.css' %}">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Lacuna Creations | Admin Registration</title>
+</head>
+<body>
+  <div class="container">
+
+    {% include 'page_items/menu.html' %}
+
+    <div class="registration-form">
+
+      <div class="form-top-text">
+        <p>Register</p>
+        <h1>Administration</h1>
+      </div>
+
+      <form action="/admin/registration-logic" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="First Name" name="first_name">
+        <input type="text" placeholder="Last Name" name="last_name">
+        <input type="text" placeholder="Email" name="email">
+        <input type="password" placeholder="Password" name="password">
+        <input type="password" placeholder="Confirm Password" name="conf_password">
+
+        <input type="password" placeholder="Registration Code" class="code" name="code">
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="errors">
+        {% if messages %}
+          {% for m in messages %}
+            <p>{{ m }}</p>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+
+    </div>
+  
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="{% static 'base_website/js/global.js' %}"></script>
+
+</body>
+</html>

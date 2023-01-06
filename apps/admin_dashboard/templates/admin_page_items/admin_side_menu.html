@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/admin_side_menu.css' %}">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Side Menu</title>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu-items">
+
+      <p>Hey,</p>
+      <h2>{{ admin.first_name }}</h2>
+
+      <div class="top-items">
+        <ul>
+          <a href="/admin/dashboard">
+            <li>
+              <i class="fas fa-home"></i> 
+              <p>Dashboard</p>
+            </li>
+          </a>
+          <a href="/admin/projects">
+            <li>
+              <i class="fas fa-desktop"></i>
+              <p>All Projects</p>
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <i class="fas fa-user-lock"></i>
+              <p>Clients</p>
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <i class="fas fa-hand-holding-usd"></i>
+              <p>Sales</p>
+            </li>
+          </a>
+
+        </ul>
+      </div>
+      <div class="mid-items">
+        <ul>
+          <a href="">
+            <li>
+              <i class="fas fa-user-cog"></i>
+              <p>My Projects</p>
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <i class="fas fa-comments"></i>
+              <p>Messages</p>
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <i class="fas fa-tasks"></i>
+              <p>To Do</p>
+            </li>
+          </a>
+
+          <a href="">
+            <li>
+              <i class="fas fa-bell"></i>
+              <p>Notifications</p>
+            </li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="bottom-container">
+        <div class="menu-bottom">
+          <div class="left">
+            <a href="/admin/settings"><i class="fas fa-cog"></i></a>
+          </div>
+          <div class="right">
+            <a href="/admin/logout">
+              <button><p>Logout</p></button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
