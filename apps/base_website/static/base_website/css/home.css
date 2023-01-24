@@ -1,0 +1,20 @@
+.hero-container {
+    text-align: center;
+    padding: 15rem 0;
+    margin-top: -4rem;
+    background-image: url('../img/dev.png');
+    background-size: cover;
+    background-position: center;
+}
+.hero-container h1 {
+    background: linear-gradient(90deg, rgba(23,143,214,1) 0%, rgba(64,226,162,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.subhero-content {
+    width: 50%;
+    padding: 3rem;
+    margin-top: -3rem;
+    background: var(--linear);
+}

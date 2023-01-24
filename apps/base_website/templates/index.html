@@ -9,6 +9,7 @@
   <!-- CSS LINKS -->
   <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
   <link rel="stylesheet" href="{% static 'base_website/css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'base_website/css/home.css' %}">
 
   <!-- FONT AWESOME -->
   <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
@@ -17,7 +18,7 @@
 
 </head>
 <body>
-  <div class="container">
+  <div class="home-container">
 
     <!-- MENU -->
     {% include 'page_items/menu.html' %}
@@ -32,144 +33,26 @@
     {% endif %}
 
     <!-- MAIN SLIDER -->
-    <div class="main-content">
-      <div class="main-content-left">
-        <h1>Your last web & design development partner</h1>
-        <p>We are product developers, advisors and engineers solving business challenges via creating future-ready apps, websites and digital solutions.</p>
-      </div>
-      <div class="main-content-right">
-        {% include 'test/code_animation.html' %}
-      </div>
-    </div>
+    <div class="hero-container">
+      <div class="hero-content">
 
-    <!-- PORTFOLIO -->
-    <div class="portfolio-container">
-      <div class="portolio-content">
+        <h2>We offer</h2>
+        <h1>Development Solutions</h1>
+        <h2>To help you grow</h2>
 
-        <div class="portfolio-top-text">
-          <p>Explore Our</p>
-          <h1>Projects</h1>
-          <a href="">View All <i class="far fa-arrow-alt-circle-right"></i></a>
-        </div>
-
-        <div class="portfolio-items">
-          <div class="portfolio-item-project">
-            <span>
-              <h1><i class="fab fa-python"></i></h1>
-              <h2>Nomadic Supply Co</h2>
-              <p>Python / Django</p>
-            </span>
-          </div>
-          <div class="portfolio-item-project">
-            <span>
-              <h1><i class="fab fa-react"></i></h1>
-              <h2>Black List</h2>
-              <p>React</p>
-            </span>
-          </div>
-          <div class="portfolio-item-project">
-            <span>
-              <h2><i class="fab fa-angular"></i></h2>
-              <h2>Pass Cloud</h2>
-              <p>Angular</p>
-            </span>
-          </div>
-        </div>
       </div>
     </div>
-
-    <!-- SERVICES -->
-    <div class="services-container">
-      <div class="services-content">
-
-        <div class="services-top-text">
-          <p>Check out our</p>
-          <h1>serveces</h1>
-          <a href="">View All <i class="far fa-arrow-alt-circle-right"></i></a>
-
-        </div>
-        
-        <div class="services-items">
-          <div class="service-column">
-            <div class="service-item">
-              <h1><i class="fa fa-solid fa-laptop-code"></i></h1>
-              <h2>Website Development</h2>
-              <p>Excite your customers with the aesthetic look and feel of your web solution. We build websites and platforms of great performance and beautiful design to present your business value best</p>
-            </div>
-            <div class="service-item">
-              <h1><i class="far fa-object-ungroup"></i></h1>
-              <h2>UX / UI Design</h2>
-              <p>Excite your customers with the aesthetic look and feel of your web solution. We build websites and platforms of great performance and beautiful design to present your business value best</p>
-            </div>
-          </div>
-
-          <div class="service-column">
-            <div class="service-item">
-              <h1><i class="fas fa-pencil-alt"></i></h1>
-              <h2>Graphic Design</h2>
-              <p>Put the perfect brain into your digital product. We implement the most complex solution architecture to establish teh foundation of an effecient, performant, and scalable digital solution.</p>
-            </div>
-
-            <div class="service-item">
-              <h1><i class="fas fa-camera"></i></h1>
-              <h2>Photography</h2>
-              <p>Excite your customers with the aesthetic look and feel of your web solution. We build websites and platforms of great performance and beautiful design to present your business value best</p>
-            </div>
-          </div>
-
-        </div>
+  
+    <div class="subhero-container">
+      <div class="subhero-content">
+        <h4>Who are we?</h4>
+        <br>
+        <p>Let's keep it simple. We are the last tech team you will ever need. From designing, to development, to management, we do it all.</p>
       </div>
-    </div>
-
-    <!-- MEET THE TEAM -->
-    <div class="team">
-      <button>
-        <h1>
-          Meet The Team
-        </h1>
-      </button>
     </div>
 
     <!-- FOOTER -->
     {% include 'page_items/footer.html' %}
-
-
-
-
-
-    <!-- menu -->
-    <!-- <div class="menu">
-      <p>menu</p>
-    </div> -->
-
-    <!-- hero -->
-    <!-- <div class="hero">
-      <p>hero</p>
-    </div> -->
-
-    <!-- about -->
-    <!-- <div class="about">
-      <p>about</p>
-    </div> -->
-
-    <!-- services -->
-    <!-- <div class="services">
-      <p>services</p>
-    </div> -->
-
-    <!-- leadership -->
-    <!-- <div class="leadership">
-      <p>leadership</p>
-    </div> -->
-
-    <!-- contact -->
-    <!-- <div class="contact">
-      <p>contact</p>
-    </div> -->
-
-
-
-
 
   </div>
 

@@ -1,62 +1,72 @@
 /* FONT IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
-/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'); */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --black: #070808;
+  --white: #fff;
+  --blue: #2788c5;
+  --green: #65c094;
+  --linear: linear-gradient(90deg, rgba(23,143,214,1) 0%, rgba(64,226,162,1) 100%);
+
+}
+/*********************** 
+FONTS
+
+Source Code
+font-family: 'Source Code Pro', monospace;
+
+Abril Fatface
+font-family: 'Abril Fatface', cursive;
+
+***********************/
+
+/*********************** 
+GLOBAL
+***********************/
 * {
   margin: 0 auto;
   padding: 0;
+  color: var(--white);
 }
-
 body {
-  transition: .1s;
+  background: var(--black);
 }
-.dark-mode {
-  background: #242424;
-  color: white;
-}
-.dark-mode a {
-  color: white;
-  text-decoration: none;
-}
-
 h1 {
   font-family: 'Source Code Pro', monospace;
+  font-weight: 800;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  letter-spacing: 3px;
 }
-
 h2 {
   font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 3px;
-
 }
-
 h3 {
   font-family: 'Source Code Pro', monospace;
 }
-
 h4 {
   font-family: 'Source Code Pro', monospace;
 }
-
 p {
   font-family: 'Source Code Pro', monospace;
 }
-
 a {
-  font-family: 'Source Code Pro', monospace;
   text-decoration: none;
-  color: #222222;
-}
-
-ul  {
   font-family: 'Source Code Pro', monospace;
-  list-style: none;
 }
+.btn-primary {
+  font-family: 'Source Code Pro', monospace;
+  text-transform: uppercase;
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid var(--white);
 
-.success_message {
-  width: 100%;
-  text-align: center;
-  background-color: #71c17a;
-  padding: 15px;
+  transition: .2s;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, rgba(39,136,197,1) 0%, rgba(101,192,148,1) 100%);
+  transition: .2s;
 }
