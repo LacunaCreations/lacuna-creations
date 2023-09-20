@@ -1,8 +1,11 @@
+/* ====================================== */
+/* hero */
+/* ====================================== */
 .hero-container {
     text-align: center;
     padding: 15rem 0;
     margin-top: -4rem;
-    background-image: url('../img/dev.png');
+    /* background: linear-gradient(90deg, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.80) 100%),url('../img/keyboard-2.jpg'); */
     background-size: cover;
     background-position: center;
 }
@@ -11,10 +14,33 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
-
-.subhero-content {
-    width: 50%;
-    padding: 3rem;
-    margin-top: -3rem;
+.subhero-container {
+    width: 100%;
+}
+.h-border {
+    height: 3px;
+    width: 100%;
     background: var(--linear);
+}
+.subhero-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+}
+.order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+}
+
+/* ====================================== */
+/* subhero */
+/* ====================================== */
+.order i {
+    background: var(--linear-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }

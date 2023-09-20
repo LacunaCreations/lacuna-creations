@@ -2,14 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+  /* colors */
   --black: #070808;
+  --black-g: #070808c2;
   --white: #fff;
   --blue: #2788c5;
   --green: #65c094;
   --linear: linear-gradient(90deg, rgba(23,143,214,1) 0%, rgba(64,226,162,1) 100%);
+  --linear-g: linear-gradient(90deg, rgba(23,143,214,.9) 0%, rgba(64,226,162,.9) 100%);
+  --linear-2: linear-gradient(180deg, rgba(23,143,214,1) 0%, rgba(64,226,162,1) 100%);
+  --linear-2-g: linear-gradient(180deg, rgba(23,143,214,.9) 0%, rgba(64,226,162,.9) 100%);
+
+  /* fonts */
+  --step--2: clamp(0.78rem, 0.77rem + 0.03vw, 0.80rem);
+  --step--1: clamp(0.94rem, 0.92rem + 0.11vw, 1.00rem);
+  --step-0: clamp(1.13rem, 1.08rem + 0.22vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.28rem + 0.37vw, 1.56rem);
+  --step-2: clamp(1.62rem, 1.50rem + 0.58vw, 1.95rem);
+  --step-3: clamp(1.94rem, 1.77rem + 0.87vw, 2.44rem);
+  --step-4: clamp(2.33rem, 2.08rem + 1.25vw, 3.05rem);
+  --step-5: clamp(2.80rem, 2.45rem + 1.77vw, 3.82rem);
 
 }
-/*********************** 
+
+/* ======================================
 FONTS
 
 Source Code
@@ -18,13 +34,13 @@ font-family: 'Source Code Pro', monospace;
 Abril Fatface
 font-family: 'Abril Fatface', cursive;
 
-***********************/
+====================================== */
 
-/*********************** 
-GLOBAL
-***********************/
+/* ====================================== */
+/* global */
+/* ====================================== */
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   color: var(--white);
 }
@@ -36,24 +52,33 @@ h1 {
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-size: var(--step-4);
 }
 h2 {
   font-family: 'Source Code Pro', monospace;
   font-weight: 300;
   text-transform: uppercase;
+  font-size: var(--step-3);
 }
 h3 {
   font-family: 'Source Code Pro', monospace;
+  font-size: var(--step-2);
 }
 h4 {
   font-family: 'Source Code Pro', monospace;
+  font-size: var(--step-1);
 }
 p {
   font-family: 'Source Code Pro', monospace;
+  font-size: var(--step--1);
 }
 a {
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
+  font-size: var(--step--1);
+}
+i {
+  font-size: var(--step-1);
 }
 .btn-primary {
   font-family: 'Source Code Pro', monospace;

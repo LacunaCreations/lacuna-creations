@@ -19,21 +19,37 @@
 
       <!-- Menu Left -->
       <div class="menu-left">
-        <a href="/">
-          <p>Lacuna creations</p>
-        </a>
+        <div class="menu-left-content">
+          <a href="/">
+            <p>Lacuna creations</p>
+          </a>
+        </div>
       </div>
 
       <!-- Menu Right -->
-      <div class="menu-right">
-        <a href="/services">Services</a>
-        <a href="/team">Team</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/contact">Contact</a>
+      <div class="menu-right" >
+        <div class="hamburger-icon" >
+          <label for="check">
+            <input type="checkbox" id="check" onclick="hamMenu()"/> 
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
       </div>
       
     </div>
 
   </div>
+
+  <div class="menu-popup" id="menu-popup">
+    <div class="menu-popup-items">
+      <a href="">Home</a>
+      <a href="">Services</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </div>
+  </div>
+
 </body>
 </html>

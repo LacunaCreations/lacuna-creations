@@ -1,3 +1,6 @@
+.menu {
+  margin: 3rem;
+}
 .menu-items {
   width: 100%;
   display: flex;
@@ -10,26 +13,95 @@
 .menu a {
   text-transform: uppercase;
 }
-.menu-left {
-  padding: 1rem;
-  flex: 1;
-}
 .menu-right {
-  padding: 1rem;
+  position: fixed;
+  z-index: 10;
+  right: 3rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.menu-right a {
-  padding-left: 1rem;
+.menu-right i {
   color: var(--white);
+  font-size: 28px;
+  padding: 0 10px;
   transition: .2s;
 }
-.menu-right a:hover {
-  color: var(--green);
-  letter-spacing: 2px;
+.menu-right i:hover {
+  background: var(--white);
+  color: var(--black);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: .2s;
+}
+#menu-popup {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 0px;
+  width: 100%;
+  overflow: hidden;
+  background: var(--black-g);
+  backdrop-filter: blur(7.1px);
 
-  background: -webkit-linear-gradient(0deg, rgba(39,136,197,1) 0%, rgba(101,192,148,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px); */
+
+  transition: .8s;
+}
+.menu-popup-items {
+  height: 100%;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-popup-items a {
+  margin: 0 1rem;
+}
+
+/* Hamburger Menu */
+.hamburger-icon label {
+  display:flex;
+  flex-direction:column;
+  width: 2.5rem;
+  cursor:pointer;
+}
+
+.hamburger-icon label span{
+  background: #fff;
+  border-radius:10px;
+  height: 4px;
+  margin: 4px 0;
+  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+  
+.hamburger-icon span:nth-of-type(1){
+  width:50%;
+}
+.hamburger-icon span:nth-of-type(2){
+  width:100%;
+}
+.hamburger-icon span:nth-of-type(3){
+  width:75%;  
+}
+.hamburger-icon input[type="checkbox"]{
+  display:none;
+} 
+.hamburger-icon input[type="checkbox"]:checked ~ span:nth-of-type(1){
+  transform-origin:bottom;
+  transform:rotatez(45deg) translate(5px,0px)
+}
+
+.hamburger-icon input[type="checkbox"]:checked ~ span:nth-of-type(2){   
+  transform-origin:top;
+  transform:rotatez(-45deg)
+}
+
+.hamburger-icon input[type="checkbox"]:checked ~ span:nth-of-type(3){
+  transform-origin:bottom;
+  width:50%;
+  transform: translate(18px,-6px) rotatez(45deg);  
 }
