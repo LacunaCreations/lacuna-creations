@@ -62,6 +62,8 @@ def admin_registration_logic(request):
       )
       request.session['admin_id'] = new_admin.id
       print(new_admin.id)
+      print(new_admin.first_name)
+      print(new_admin.last_name)
 
       return redirect('/admin/dashboard')
 
@@ -184,6 +186,8 @@ def admin_dashboard(request):
     context = {
       'admin': logged_admin
     }
+    print(logged_admin.first_name)
+    print(logged_admin.last_name)
     return render(request, 'admin_dashboard.html', context)
   else:
     return redirect('/admin/login')

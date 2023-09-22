@@ -16,7 +16,7 @@ class AdministratorManager(models.Manager):
   def register_validator(self, postData):
     errors = {}
 
-    registration_code = "5P#{^ierY7"
+    registration_code = "g3Eu0sVY3mtEkyE8m75EknpXG2k4h5"
 
     # NAME VALIDATIONS
     if len(postData['first_name']) < 2:
@@ -32,7 +32,7 @@ class AdministratorManager(models.Manager):
       errors['email'] = "Must be valid email"
 
     # PASSWORD VALIDATIONS
-    if postData['password'] < 3:
+    if len(postData['password']) <= 3:
       errors['password'] = "Password must be entered"
     if postData['password'] != postData['conf_password']:
       errors['password_mismatch'] = "Passwords do not match"
