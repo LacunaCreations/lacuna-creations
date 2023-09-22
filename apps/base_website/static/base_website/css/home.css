@@ -2,8 +2,7 @@
 /* hero */
 /* ====================================== */
 .hero-container {
-    text-align: center;
-    padding: 15rem 0;
+    padding: 15rem 3rem;
     margin-top: -8rem;
     background: linear-gradient(90deg, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.80) 100%),url('../img/keyboard-2.jpg');
     background-size: cover;
@@ -13,6 +12,22 @@
     background: linear-gradient(90deg, rgba(23,143,214,1) 0%, rgba(64,226,162,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
+}
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hero-left {
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* ====================================== */
