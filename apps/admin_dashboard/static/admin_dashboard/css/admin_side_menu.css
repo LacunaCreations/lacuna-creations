@@ -27,8 +27,12 @@
 }
 .top-items ul li {
   display: flex;
+  align-items: center;
   padding: 20px ;
   transition: 0.2s;
+}
+.top-items ul li i, .mid-items ul li i {
+  font-size: 14px;
 }
 .mid-items {
   padding: 20px 0;
