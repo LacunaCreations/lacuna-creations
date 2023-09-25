@@ -271,16 +271,29 @@ def clients(request):
   
   else:
     return redirect('/admin/login')
-
-def create_project_logic(request):
+  
+def create_client(request):
   if 'admin_id' in request.session:
-    if request.method == 'POST':
-      logged_admin = Administrator.objects.get(id = request.session['admin_id'])
-      new_client = Clients.objects.create(
-          project_name = request.POST['project_name'],
-          creator = logged_admin,
-        )
-      return redirect('/admin/clients')
+    logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+    all_clients = Client.objects.all()
+    context = {
+      'clients': all_clients,
+      'admin': logged_admin,
+    }
+    return render(request, 'create_project.html', context)
+
+  else:
+    return redirect('/admin/login')
+
+def create_client_logic(request):
+  if 'admin_id' in request.session:
+    # if request.method == 'POST':
+    #   logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+    #   new_client = Client.objects.create(
+    #       project_name = request.POST['project_name'],
+    #       creator = logged_admin,
+    #     )
+    return redirect('/admin/clients')
 
   else:
     return redirect('/admin/login')

@@ -121,3 +121,14 @@ class Project(models.Model):
   end_time = models.DateTimeField(auto_now = True)
 
   objects = ProjectManager()
+
+class Project(models.Model):
+  company_name = models.CharField(max_length=200)
+  phone = models.CharField(max_length = 50)
+  email = models.CharField(max_length=200)
+  contact_name = models.CharField(max_length=200)
+  creator = models.ForeignKey(Administrator, null=True, on_delete=models.CASCADE)
+  start_time = models.DateTimeField(auto_now_add = True)
+  end_time = models.DateTimeField(auto_now = True)
+
+  objects = ProjectManager()
