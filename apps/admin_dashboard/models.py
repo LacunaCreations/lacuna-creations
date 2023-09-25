@@ -116,7 +116,8 @@ class Project(models.Model):
   client = models.CharField(max_length=200)
   service = models.CharField(max_length=200)
   price = models.CharField(max_length=200)
-  start_time = models.DateTimeField()
-  end_time = models.DateTimeField()
+  creator = models.ForeignKey(Administrator, null=True, on_delete=models.CASCADE)
+  start_time = models.DateTimeField(auto_now_add = True)
+  end_time = models.DateTimeField(auto_now = True)
 
   objects = ProjectManager()

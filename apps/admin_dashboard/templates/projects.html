@@ -25,7 +25,7 @@
       
       <!-- TOP BUTTONS -->
       <div class="project-top-section">
-        <a href="">
+        <a href="/admin/create-project">
           <div class="project-top-section-items">
             <p>Create New</p>
           </div>
@@ -48,27 +48,19 @@
               <th><h4>Services</h4></th>
               <th><h4>Manage</h4></th>
             </tr>
-            <tr>
-              <td><p>Lacuna Website</p></td>
-              <td><p>Jacob Moore</p></td>
-              <td><p>Lacuna Creations</p></td>
-              <td><p>Web Dev, Web Management</p></td>
-              <td><i class="fas fa-clipboard"></i><i class="fas fa-cog"></i><i class="fas trash fa-trash-alt"></i></td>
-            </tr>
-            <tr>
-              <td><p>Taos Gravel Photoshoot</p></td>
-              <td><p>Claire Moore</p></td>
-              <td><p>Taos Gravel</p></td>
-              <td><p>Photography</p></td>
-              <td><i class="fas fa-clipboard"></i><i class="fas fa-cog"></i><i class="fas trash fa-trash-alt"></i></td>
-            </tr>
-            <tr>
-              <td><p>Nomadic Website & logo</p></td>
-              <td><p>Zack Rodger</p></td>
-              <td><p>Nomadic Supply Co</p></td>
-              <td><p>Web Dev, Graphic Design</p></td>
-              <td><i class="fas fa-clipboard"></i><i class="fas fa-cog"></i><i class="fas trash fa-trash-alt"></i></td>
-            </tr>
+            {% for p in projects %}
+              <tr>
+                <td><p>{{ p.project_name }}</p></td>
+                <td><p>{{ p.client }}</p></td>
+                <td><p>{{ p.company }}</p></td>
+                <td><p>{{ p.service }}</p></td>
+                <td>
+                  <i class="fas fa-clipboard"></i>
+                  <i class="fas fa-cog"></i>
+                  <a href="/admin/delete-project/{{ p.id }}"><i class="fas trash fa-trash-alt"></a></i>
+                </td>
+              </tr>
+            {% endfor %}
           </table>
         </div>
       </div>

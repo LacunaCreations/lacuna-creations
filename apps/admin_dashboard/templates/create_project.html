@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/admin_profile_update.css' %}">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Lacuna Creations | Admin Profile Update</title>
+</head>
+<body>
+    <div class="container">
+
+        {% include 'admin_page_items/admin_side_menu.html' %}
+
+        <div class="right-container">
+            <h1>Create Project</h1>
+            <p>* please not that only admins can create new projects</p>
+
+            <!-- TOP SECTION -->
+            <div class="update-form">
+                <form action="/admin/create-project-logic" method="POST">
+                {% csrf_token %}
+
+                <div class="form-input">
+                    <input type="text" placeholder="Project Name" name="project_name">
+                    <input type="text" placeholder="Company" name="company">
+                    <input type="text" placeholder="Description" name="description">
+                    <input type="text" placeholder="Client" name="client">
+                    <input type="text" placeholder="Service" name="service">
+                    <input type="text" placeholder="Price" name="price">
+                </div>
+
+                <button type="submit">Create Project</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -60,10 +60,7 @@ def admin_registration_logic(request):
         password = hashed_pw,
         code = request.POST['code'],
       )
-      request.session['admin_id'] = new_admin.id
-      print(new_admin.id)
-      print(new_admin.first_name)
-      print(new_admin.last_name)
+      request.session['admin_id'] = new_admin.ids
 
       return redirect('/admin/dashboard')
 
@@ -222,7 +219,48 @@ def projects(request):
   else:
     return redirect('/admin/login')
 
+def create_project(request):
+  if 'admin_id' in request.session:
+    logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+    all_projects = Project.objects.all()
+    context = {
+      'projects': all_projects,
+      'admin': logged_admin,
+    }
+    return render(request, 'create_project.html', context)
 
+  else:
+    return redirect('/admin/login')
+
+def create_project_logic(request):
+  if 'admin_id' in request.session:
+    if request.method == 'POST':
+      logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+      new_project = Project.objects.create(
+          project_name = request.POST['project_name'],
+          company = request.POST['company'],
+          description = request.POST['description'],
+          client = request.POST['client'],
+          service = request.POST['service'],
+          price = request.POST['price'],
+          creator = logged_admin,
+        )
+      return redirect('/admin/projects')
+
+  else:
+    return redirect('/admin/login')
+
+def delete_project(request, project_id):
+  if 'admin_id' in request.session:
+    cart = Cart.objects.get(id = request.session['current_cart'])
+    cart_item = Cart_Item.objects.get(id = product_id)
+
+    cart.single_cart.remove(cart_item)
+    request.session['cart_total'] -= cart_item.the_product.price
+
+    return redirect('/admin/projects')
+  else:
+    return redirect('/admin/login')
 
 
 

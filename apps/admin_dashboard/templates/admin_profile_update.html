@@ -15,50 +15,50 @@
 
   <title>Lacuna Creations | Admin Profile Update</title>
 </head>
-<body>
-  <div class="container">
+  <body>
+    <div class="container">
 
-    {% include 'admin_page_items/admin_side_menu.html' %}
+      {% include 'admin_page_items/admin_side_menu.html' %}
 
-    <div class="right-container">
-      <h1>Admin Profile update</h1>
+      <div class="right-container">
+        <h1>Admin Profile update</h1>
 
-      <!-- TOP SECTION -->
-      <div class="update-form">
-        <form action="/admin/admin-profile-update-logic" method="POST">
-          {% csrf_token %}
-          <div class="form-input">
-            <p>Title</p>
-            <input type="text" value="{{ admin.title }}" name="title">
-          </div>
+        <!-- TOP SECTION -->
+        <div class="update-form">
+          <form action="/admin/admin-profile-update-logic" method="POST">
+            {% csrf_token %}
+            <div class="form-input">
+              <p>Title</p>
+              <input type="text" value="{{ admin.title }}" name="title">
+            </div>
 
-          <div class="form-input">
-            <p>Name</p>
-            <input type="text" value="{{ admin.first_name }}" name="first_name">
-            <input type="text" value="{{ admin.last_name }}" name="last_name">
-          </div>
+            <div class="form-input">
+              <p>Name</p>
+              <input type="text" value="{{ admin.first_name }}" name="first_name">
+              <input type="text" value="{{ admin.last_name }}" name="last_name">
+            </div>
 
-          <div class="form-input">
-            <p>Email</p>
-            <input type="text" value="{{ admin.email }}" name="email">
-          </div>
+            <div class="form-input">
+              <p>Email</p>
+              <input type="text" value="{{ admin.email }}" name="email">
+            </div>
 
-          <div class="form-input">
-            <p>Username</p>
-            <input type="text" value="{{ admin.username }}" name="username">
-          </div>
+            <div class="form-input">
+              <p>Username</p>
+              <input type="text" value="{{ admin.username }}" name="username">
+            </div>
 
-          <div class="form-input">
-            <p>Phone Number</p>
-            <input type="text" value="{{ admin.phone }}" name="phone">
-          </div>
+            <div class="form-input">
+              <p>Phone Number</p>
+              <input type="text" value="{{ admin.phone }}" name="phone">
+            </div>
 
-          <button type="submit">Update Info</button>
-        </form>
+            <button type="submit">Update Info</button>
+          </form>
+        </div>
+
       </div>
-
     </div>
-  </div>
 
-</body>
+  </body>
 </html>
