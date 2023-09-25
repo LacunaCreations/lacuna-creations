@@ -252,13 +252,11 @@ def create_project_logic(request):
 
 def delete_project(request, project_id):
   if 'admin_id' in request.session:
-    cart = Cart.objects.get(id = request.session['current_cart'])
-    cart_item = Cart_Item.objects.get(id = product_id)
-
-    cart.single_cart.remove(cart_item)
-    request.session['cart_total'] -= cart_item.the_product.price
+    this_project = Project.objects.get(id = project_id)
+    this_project.delete()
 
     return redirect('/admin/projects')
+
   else:
     return redirect('/admin/login')
 

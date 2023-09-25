@@ -16,7 +16,7 @@ urlpatterns = [
   path('projects', views.projects),
   path('create-project', views.create_project),
   path('create-project-logic', views.create_project_logic),
-  path('delete-project/<int:product_id>', views.delete_project),
+  path('delete-project/<int:project_id>', views.delete_project),
 
   # Logout
   path('logout', views.admin_logout),
