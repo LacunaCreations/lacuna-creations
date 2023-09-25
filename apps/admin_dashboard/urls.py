@@ -18,6 +18,12 @@ urlpatterns = [
   path('create-project-logic', views.create_project_logic),
   path('delete-project/<int:project_id>', views.delete_project),
 
+  # Clients
+  path('clients', views.clients),
+  path('create-client', views.create_client),
+  # path('create-client-logic', views.create_client_logic),
+  # path('delete-client/<int:client_id>', views.delete_client),
+
   # Logout
   path('logout', views.admin_logout),
 

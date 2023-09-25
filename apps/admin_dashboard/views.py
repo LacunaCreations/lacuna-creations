@@ -112,6 +112,20 @@ def employee_registration_logic(request):
   return redirect('/admin/settings')
 
 ##############################################################
+# ADMIN DASHBOARD
+def admin_dashboard(request):
+  if 'admin_id' in request.session:
+    logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+    context = {
+      'admin': logged_admin
+    }
+    print(logged_admin.first_name)
+    print(logged_admin.last_name)
+    return render(request, 'admin_dashboard.html', context)
+  else:
+    return redirect('/admin/login')
+  
+##############################################################
 # ADMIN SETTINGS
 def admin_settings(request):
   if 'admin_id' in request.session:
@@ -172,20 +186,6 @@ def admin_update_logic(request):
     logged_admin.save()
 
     return redirect('/admin/settings')
-  else:
-    return redirect('/admin/login')
-
-##############################################################
-# ADMIN DASHBOARD
-def admin_dashboard(request):
-  if 'admin_id' in request.session:
-    logged_admin = Administrator.objects.get(id = request.session['admin_id'])
-    context = {
-      'admin': logged_admin
-    }
-    print(logged_admin.first_name)
-    print(logged_admin.last_name)
-    return render(request, 'admin_dashboard.html', context)
   else:
     return redirect('/admin/login')
 
@@ -254,14 +254,36 @@ def delete_project(request, project_id):
   if 'admin_id' in request.session:
     this_project = Project.objects.get(id = project_id)
     this_project.delete()
-
     return redirect('/admin/projects')
 
   else:
     return redirect('/admin/login')
 
+##############################################################
+# CLIENTS
+def clients(request):
+  if 'admin_id' in request.session:
+    logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+    context = {
+      'admin': logged_admin
+    }
+    return render(request, 'admin_clients.html', context)
+  
+  else:
+    return redirect('/admin/login')
 
+def create_project_logic(request):
+  if 'admin_id' in request.session:
+    if request.method == 'POST':
+      logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+      new_client = Clients.objects.create(
+          project_name = request.POST['project_name'],
+          creator = logged_admin,
+        )
+      return redirect('/admin/clients')
 
+  else:
+    return redirect('/admin/login')
 
 
 
