@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% load static %}
+  <!-- CSS LINKS -->
+  <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/admin_clients.css' %}">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
+
+  <title>Lacuna Creations | Clients</title>
+</head>
+<body>
+  <div class="container">
+
+    {% include 'admin_page_items/admin_side_menu.html' %}
+
+    <div class="right-container">
+      <h1>Clients</h1>
+      
+      <!-- TOP BUTTONS -->
+      <div class="project-top-section">
+        <a href="">
+          <div class="project-top-section-items">
+            <p>Create New</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="project-top-section-items">
+            <p>Past Clients</p>
+          </div>
+        </a>
+      </div>
+  
+
+    </div>
+  </div>
+
+</body>
+</html>
