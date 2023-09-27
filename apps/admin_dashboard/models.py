@@ -82,6 +82,10 @@ class ProjectManager(models.Manager):
     errors = {}
     return errors
 
+class ClientManager(models.Manager):
+  def project_validator(self, postData):
+    errors = {}
+    return errors
 
 class Administrator(models.Model):
   first_name = models.CharField(max_length = 15)
@@ -122,7 +126,7 @@ class Project(models.Model):
 
   objects = ProjectManager()
 
-class Project(models.Model):
+class Client(models.Model):
   company_name = models.CharField(max_length=200)
   phone = models.CharField(max_length = 50)
   email = models.CharField(max_length=200)
@@ -131,4 +135,4 @@ class Project(models.Model):
   start_time = models.DateTimeField(auto_now_add = True)
   end_time = models.DateTimeField(auto_now = True)
 
-  objects = ProjectManager()
+  objects = ClientManager()
