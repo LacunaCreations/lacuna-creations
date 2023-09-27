@@ -280,7 +280,7 @@ def create_client(request):
       'clients': all_clients,
       'admin': logged_admin,
     }
-    return render(request, 'create_project.html', context)
+    return render(request, 'create_client.html', context)
 
   else:
     return redirect('/admin/login')
