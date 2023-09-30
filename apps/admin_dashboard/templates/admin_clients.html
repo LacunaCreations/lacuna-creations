@@ -35,7 +35,43 @@
             <p>Past Clients</p>
           </div>
         </a>
-      </div>
+      </div>  
+
+        <!-- WEBSITE PROJECTS -->
+        <div class="website-section">
+          <div class="website-section-item">
+            {% if clients %}
+  
+              <table>
+                <tr id="top">
+                  <th><h4>Project Name</h4></th>
+                  <th><h4>Client</h4></th>
+                  <th><h4>Company</h4></th>
+                  <th><h4>Services</h4></th>
+                  <th><h4>Manage</h4></th>
+                </tr>
+  
+                {% for c in clients %}
+                  <tr>
+                    <td><p>{{ p.project_name }}</p></td>
+                    <td><p>{{ p.client }}</p></td>
+                    <td><p>{{ p.company }}</p></td>
+                    <td><p>{{ p.service }}</p></td>
+                    <td>
+                      <i class="fas fa-clipboard"></i>
+                      <i class="fas fa-cog"></i>
+                      <a href="/admin/delete-project/{{ p.id }}"><i class="fas trash fa-trash-alt"></a></i>
+                    </td>
+                  </tr>
+                {% endfor %}
+                
+              </table> 
+  
+            {% else %}
+              <p>No clients</p>
+            {% endif %}
+          </div>
+        </div>
   
 
     </div>
