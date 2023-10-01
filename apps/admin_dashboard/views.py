@@ -269,7 +269,7 @@ def clients(request):
       'clients': all_clients,
       'admin': logged_admin
     }
-    return render(request, 'admin_clients.html', context)
+    return render(request, 'clients.html', context)
   
   else:
     return redirect('/admin/login')
