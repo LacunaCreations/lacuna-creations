@@ -21,7 +21,7 @@ urlpatterns = [
   # Clients
   path('clients', views.clients),
   path('create-client', views.create_client),
-  # path('create-client-logic', views.create_client_logic),
+  path('create-client-logic', views.create_client_logic),
   # path('delete-client/<int:client_id>', views.delete_client),
 
   # Logout

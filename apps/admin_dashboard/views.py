@@ -264,7 +264,9 @@ def delete_project(request, project_id):
 def clients(request):
   if 'admin_id' in request.session:
     logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+    all_clients = Client.objects.all()
     context = {
+      'clients': all_clients,
       'admin': logged_admin
     }
     return render(request, 'admin_clients.html', context)
@@ -287,16 +289,19 @@ def create_client(request):
 
 def create_client_logic(request):
   if 'admin_id' in request.session:
-    # if request.method == 'POST':
-    #   logged_admin = Administrator.objects.get(id = request.session['admin_id'])
-    #   new_client = Client.objects.create(
-    #       project_name = request.POST['project_name'],
-    #       creator = logged_admin,
-    #     )
+    if request.method == 'POST':
+      logged_admin = Administrator.objects.get(id = request.session['admin_id'])
+      new_client = Client.objects.create(
+          company_name = request.POST['company_name'],
+          contact_name = request.POST['contact_name'],
+          phone = request.POST['phone'],
+          email = request.POST['email'],
+          creator = logged_admin,
+        )
     return redirect('/admin/clients')
 
   else:
-    return redirect('/admin/login')
+    return redirect('/admin/clients')
 
 
 
