@@ -303,6 +303,13 @@ def create_client_logic(request):
   else:
     return redirect('/admin/clients')
 
+def delete_client(request, client_id):
+  if 'admin_id' in request.session:
+    this_client = Client.objects.get(id = client_id)
+    this_client.delete()
+    return redirect('/admin/clients')
 
+  else:
+    return redirect('/admin/login')
 
 
