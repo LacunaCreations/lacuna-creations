@@ -41,31 +41,23 @@
         <div class="website-section">
           <div class="website-section-item">
             {% if clients %}
-  
-              <table>
-                <tr id="top">
-                  <th><h4>Company</h4></th>
-                  <th><h4>Contact Name</h4></th>
-                  <th><h4>Email</h4></th>
-                  <th><h4>Phone</h4></th>
-                </tr>
-  
-                {% for c in clients %}
-                  <tr>
-                    <td><p>{{ c.company_name }}</p></td>
-                    <td><p>{{ c.contact_name }}</p></td>
-                    <td><p>{{ c.email }}</p></td>
-                    <td><p>{{ c.phone }}</p></td>
-                    <td>
+
+              {% for c in clients %}
+                <div class="admin-card">
+                  <div class="admin-card-content">
+                    <p><strong>Company: </strong> {{ c.company_name }}</p>
+                    <p><strong>Contact: </strong>{{ c.contact_name }}</p>
+                    <p><strong>Email: </strong>{{ c.email }}</p>
+                    <p><strong>Phoen: </strong>{{ c.phone }}</p>
+                    <div class="admin-card-options">
                       <i class="fas fa-clipboard"></i>
                       <i class="fas fa-cog"></i>
                       <a href="/admin/delete-client/{{ c.id }}"><i class="fas trash fa-trash-alt"></a></i>
-                    </td>
-                  </tr>
-                {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
                 
-              </table> 
-  
             {% else %}
               <p>No clients</p>
             {% endif %}

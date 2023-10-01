@@ -13,7 +13,7 @@
   <!-- FONT AWESOME -->
   <script src="https://kit.fontawesome.com/7ddc4e9512.js" crossorigin="anonymous"></script>
 
-  <title>Lacuna Creations | Admin Profile Update</title>
+  <title>Lacuna Creations | New Client</title>
 </head>
     <body>
         <div class="container">
@@ -22,7 +22,7 @@
 
             <div class="right-container">
                 <h1>Create Client</h1>
-                <p>* please note that only admins can create new projects</p>
+                <p>* please note that only admins can create new clients</p>
 
                 <!-- TOP SECTION -->
                 <div class="create-project-form">
@@ -30,12 +30,10 @@
                     {% csrf_token %}
 
                     <div class="form-input">
-                        <input type="text" placeholder="Project Name" name="project_name">
-                        <input type="text" placeholder="Company" name="company">
-                        <input type="text" placeholder="Description" name="description">
-                        <input type="text" placeholder="Client" name="client">
-                        <input type="text" placeholder="Service" name="service">
-                        <input type="text" placeholder="Price" name="price">
+                        <input type="text" placeholder="Company Name" name="company_name">
+                        <input type="text" placeholder="Contact Name" name="contact_name">
+                        <input type="text" placeholder="Email" name="email">
+                        <input type="text" placeholder="phone" name="phone">
                     </div>
 
                     <button type="submit">Create Project</button>
