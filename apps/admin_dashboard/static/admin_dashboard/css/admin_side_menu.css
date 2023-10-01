@@ -1,5 +1,11 @@
+.border {
+  height: 2px;
+  width: 100%;
+  background: var(--white);
+  margin: 1rem 0;
+}
+
 .menu-container {
-  height: 100%;
   width: 250px;
   position: fixed;
   top: 2rem;
@@ -7,25 +13,27 @@
   bottom: 2rem;
   background-color: #222222;
   box-shadow: 0px 0px 15px #222222;
+  border-radius: 1rem;
 
   padding: 2rem;
-  
+
   color: white;
 }
-.menu-container {
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.menu-header {
+  margin-bottom: 2rem;
 }
 .menu-items h2 {
   padding-top: 10px;
 }
 .menu-items a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
-}
-.top-items {
-  margin: 30px 0 0 0;
-  padding: 20px 0;
-  border-top: 2px solid rgb(66, 66, 66);
-  border-bottom: 2px solid rgb(66, 66, 66);
 }
 .top-items ul li {
   display: flex;
@@ -36,17 +44,14 @@
 .top-items ul li i, .mid-items ul li i {
   font-size: 14px;
 }
-.mid-items {
-  padding: 20px 0;
-  border-bottom: 2px solid rgb(66, 66, 66);
-}
+
 .mid-items ul li {
   display: flex;
   padding: 20px ;
   transition: 0.2s;
 }
 .menu-items ul li:hover {
-  background-color: #71c17a;
+  background-color: var(--green);
   border-radius: 50px;
   transition: 0.2s;
 
@@ -61,12 +66,10 @@
 }
 
 .bottom-container {
-  position: fixed;
-  bottom: 0;
-  flex: 100%;
-  width: 250px;
-  border-top: 2px solid rgb(66, 66, 66);
-
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 .menu-bottom {
   display: flex;
@@ -78,8 +81,8 @@
 }
 .right button{
   border: none;
-  color: white;
-  background: #71c17a;
+  color: var(--white);
+  background: var(--green);
   border-radius: 50px;
   margin: 20px 10px;
   padding: 10px 60px;

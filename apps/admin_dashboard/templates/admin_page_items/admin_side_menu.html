@@ -8,6 +8,7 @@
   {% load static %}
   <!-- CSS LINKS -->
   <link rel="stylesheet" href="{% static 'base_website/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/global.css' %}">
   <link rel="stylesheet" href="{% static 'admin_dashboard/css/admin_side_menu.css' %}">
 
   <!-- FONT AWESOME -->
@@ -19,10 +20,14 @@
   <div class="menu-container">
     <div class="menu-items">
 
-      <p>Hey</p>
-      <h4>{{ admin.first_name }} {{ admin.last_name }}</h4>
-
       <div class="top-items">
+        <div class="menu-header">
+          <p>Hey</p>
+          <h4>{{ admin.first_name }} {{ admin.last_name }}</h4>
+        </div>
+
+        <div class="border"></div>
+
         <ul>
           <a href="/admin/dashboard">
             <li>
@@ -48,40 +53,46 @@
               <p>Sales</p>
             </li>
           </a>
-
         </ul>
-      </div>
-      <div class="mid-items">
-        <ul>
-          <a href="">
-            <li>
-              <i class="fas fa-user-cog"></i>
-              <p>My Projects</p>
-            </li>
-          </a>
-          <a href="">
-            <li>
-              <i class="fas fa-comments"></i>
-              <p>Messages</p>
-            </li>
-          </a>
-          <a href="">
-            <li>
-              <i class="fas fa-tasks"></i>
-              <p>To Do</p>
-            </li>
-          </a>
 
-          <a href="">
-            <li>
-              <i class="fas fa-bell"></i>
-              <p>Notifications</p>
-            </li>
-          </a>
-        </ul>
+        <div class="border"></div>
+
+        <div class="mid-items">
+          <ul>
+            <a href="">
+              <li>
+                <i class="fas fa-user-cog"></i>
+                <p>My Projects</p>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <i class="fas fa-comments"></i>
+                <p>Messages</p>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <i class="fas fa-tasks"></i>
+                <p>To Do</p>
+              </li>
+            </a>
+  
+            <a href="">
+              <li>
+                <i class="fas fa-bell"></i>
+                <p>Notifications</p>
+              </li>
+            </a>
+          </ul>
+        </div>
+
       </div>
+
+      <div class="border"></div>
 
       <div class="bottom-container">
+        
         <div class="menu-bottom">
           <div class="left">
             <a href="/admin/settings"><i class="fas fa-cog"></i></a>
