@@ -4,7 +4,7 @@
     text-align: center;
 }
 .clients-top-section {
-    padding: 25px 0;
+    padding: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,7 +13,6 @@
 .clients-top-section a {
     flex: 40%;
     margin-right: 25px;
-    margin-bottom: 25px;
     padding: 50px 0;
     text-align: center;
     background-color: #222222;
@@ -27,8 +26,40 @@
     transition: 0.2s;
 }
   
+/* Client Cards */
 .website-section {
     margin-right: 25px;
+}
+.website-section-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    padding-top: 2rem;
+}
+.admin-card {
+    background: #222222;
+    border-radius: 25px;
+    padding: 3rem;
+}
+.admin-card p, .admin-card a {
+    padding-bottom: .5rem;
+}
+.admin-card h4 {
+    margin-bottom: 1rem;
+}
+.admin-card-content {
+    display: flex;
+    flex-direction: column;
+}
+.admin-card-options {
+    background: var(--green);
+    padding: 1rem 0;
+    border-radius: 10rem;
+    margin-top: 1rem;
+}
+.admin-card-options i {
+    font-size: 16px;
+    margin: 0 .5rem;
 }
 
 /* Create Client Form */

@@ -37,33 +37,34 @@
         </a>
       </div>  
 
-        <!-- WEBSITE PROJECTS -->
-        <div class="website-section">
-          <div class="website-section-item">
-            {% if clients %}
+      <!-- WEBSITE PROJECTS -->
+      <div class="website-section">
 
-              {% for c in clients %}
-                <div class="admin-card">
-                  <div class="admin-card-content">
-                    <p><strong>Company: </strong> {{ c.company_name }}</p>
-                    <p><strong>Contact: </strong>{{ c.contact_name }}</p>
-                    <p><strong>Email: </strong>{{ c.email }}</p>
-                    <p><strong>Phone: </strong>{{ c.phone }}</p>
-                    <div class="admin-card-options">
-                      <i class="fas fa-clipboard"></i>
-                      <i class="fas fa-cog"></i>
-                      <a href="/admin/delete-client/{{ c.id }}"><i class="fas trash fa-trash-alt"></a></i>
-                    </div>
+        {% if clients %}
+          <hr>
+          <div class="website-section-item">
+
+            {% for c in clients %}
+              <div class="admin-card">
+                <div class="admin-card-content">
+                  <h4>{{ c.company_name }}</h4>
+                  <p><strong>Contact: </strong>{{ c.contact_name }}</p>
+                  <a href="mailto:{{ c.email }}">{{ c.email }}</a>
+                  <a href="tel:{{ c.phone }}">{{ c.phone }}</a>
+                  <div class="admin-card-options">
+                    <i class="fas fa-clipboard"></i>
+                    <i class="fas fa-cog"></i>
+                    <a href="/admin/delete-client/{{ c.id }}"><i class="fas trash fa-trash-alt"></a></i>
                   </div>
                 </div>
-              {% endfor %}
+              </div>
+            {% endfor %}
                 
-            {% else %}
-              <p>No clients</p>
-            {% endif %}
           </div>
-        </div>
-  
+        {% else %}
+          <p>No clients</p>
+        {% endif %}
+      </div>
 
     </div>
   </div>
