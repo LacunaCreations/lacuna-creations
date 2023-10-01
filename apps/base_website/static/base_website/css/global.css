@@ -47,6 +47,14 @@ font-family: 'Abril Fatface', cursive;
 body {
   background: var(--black);
 }
+
+/* Container Variables */
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Text */
 h1 {
   font-family: 'Source Code Pro', monospace;
   font-weight: 800;
@@ -81,18 +89,25 @@ a {
 i {
   font-size: var(--step-1);
 }
+
+/* Buttons */
 .btn-primary {
   font-family: 'Source Code Pro', monospace;
   text-transform: uppercase;
   color: var(--white);
   border: none;
-  padding: 10px 20px;
-  background: transparent;
-  border: 2px solid var(--white);
+  padding: 1rem 2rem;
+
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.8px);
+  -webkit-backdrop-filter: blur(2.8px);
+  border-radius: 10rem;
 
   transition: .2s;
 }
 .btn-primary:hover {
-  background: linear-gradient(90deg, rgba(39,136,197,1) 0%, rgba(101,192,148,1) 100%);
+  background: var(--blue);
+  cursor: pointer;
   transition: .2s;
 }

@@ -1,5 +1,5 @@
 .menu {
-  margin: 3rem;
+  margin: 3rem 0;
 }
 .menu-items {
   width: 100%;
@@ -16,7 +16,7 @@
 .menu-right {
   position: fixed;
   z-index: 10;
-  right: 3rem;
+  right: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
