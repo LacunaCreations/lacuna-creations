@@ -16,13 +16,13 @@
   width: 100%;
   padding: 5rem 0;
   text-align: center;
-  background-color: #222222;
-  color: white;
+  background-color: var(--gray);
+  color: var(--white);
   border-radius: 25px;
   transition: 0.2s;
 }
 .dashboard-top-section a:hover {
-  background: #71c17a;
+  background: var(--green);
   transition: 0.2s;
 
 }
@@ -42,13 +42,13 @@
   width: 100%;
   padding: 5rem 0;
   text-align: center;
-  background-color: #222222;
-  color: white;
+  background-color: var(--gray);
+  color: var(--white);
   border-radius: 25px;
   transition: 0.2s;
 }
 .lacuna-help a:hover {
-  background: #71c17a;
+  background: var(--green);
   transition: 0.2s;
 }
 
@@ -63,13 +63,13 @@
   margin-right: 25px;
   padding: 50px 0;
   text-align: center;
-  background-color: #71c17a;
-  color: white;
+  background-color: var(--green);
+  color: var(--white);
   border-radius: 25px;
   transition: 0.2s;
 }
 .paycheck a:hover {
-  background: #222222;
+  background: var(--black);
   transition: 0.2s;
 }
 
