@@ -1,5 +1,4 @@
 .right-container {
-    margin-left: 325px;
     margin-top: 25px;
     text-align: center;
 }
@@ -62,7 +61,18 @@
     margin: 0 .5rem;
 }
 
+/* Delete Popup */
+.trash-popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
 /* Create Client Form */
 .create-project-form {
     margin-top: 2rem;
 }
+
