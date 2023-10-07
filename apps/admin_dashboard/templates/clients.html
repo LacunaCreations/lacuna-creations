@@ -46,6 +46,19 @@
 
             {% for c in clients %}
               <div class="admin-card">
+
+
+                <!-- Delete Popup -->
+                <div class="trash-popup-container" id="trash-popup">
+                  <div class="trash-popup-content">
+                    <p>Are you sure you want to delete {{ c.company_name }}</p>
+                    <button class="dashboard-btn" onclick="closePopup()">No</button>
+                    <a href="/admin/delete-client/{{ c.id }}">
+                      <button class="dashboard-btn">Yes</button>
+                    </a>
+                  </div>
+                </div>
+
                 <div class="admin-card-content">
                   <h4>{{ c.company_name }}</h4>
                   <p><strong>Contact: </strong>{{ c.contact_name }}</p>
@@ -54,7 +67,7 @@
                   <div class="admin-card-options">
                     <i class="fas fa-clipboard"></i>
                     <i class="fas fa-cog"></i>
-                    <a href="/admin/delete-client/{{ c.id }}"><i class="fas trash fa-trash-alt"></a></i>
+                    <i class="fas trash fa-trash-alt" onclick="openPopup()"></i>
                   </div>
                 </div>
               </div>
@@ -69,19 +82,14 @@
     </div>
   </div>
 
-  <!-- Delete Popup -->
-  <div class="trash-popup-container" id="trash-popup">
-    <div class="trash-popup-content">
-      <p>Are you sure you want to delete {{ client.name }}</p>
-      <button class="dashboard-btn" onclick="closePopup()">No</button>
-      <button class="dashboard-btn">Yes</button>
-    </div>
-  </div>
-
 
 </body>
 
 <script>
+  function openPopup() {
+    var popup = document.getElementById('trash-popup')
+    popup.style.display = 'flex';
+  }
   function closePopup() {
     var popup = document.getElementById('trash-popup')
     popup.style.display = 'none';
