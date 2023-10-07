@@ -70,13 +70,21 @@
   </div>
 
   <!-- Delete Popup -->
-  <div class="trash-popup-container">
+  <div class="trash-popup-container" id="trash-popup">
     <div class="trash-popup-content">
       <p>Are you sure you want to delete {{ client.name }}</p>
-      <button class="dashboard-btn">No</button>
+      <button class="dashboard-btn" onclick="closePopup()">No</button>
       <button class="dashboard-btn">Yes</button>
     </div>
   </div>
 
+
 </body>
+
+<script>
+  function closePopup() {
+    var popup = document.getElementById('trash-popup')
+    popup.style.display = 'none';
+  }
+</script>
 </html>
