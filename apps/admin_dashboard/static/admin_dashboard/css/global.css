@@ -112,6 +112,42 @@ i {
   transition: .2s;
 }
 
+/* Cards */
+.website-section {
+  margin-right: 25px;
+}
+.website-section-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+  padding-top: 2rem;
+}
+.admin-card {
+  background: #222222;
+  border-radius: 25px;
+  padding: 3rem;
+}
+.admin-card p, .admin-card a {
+  padding-bottom: .5rem;
+}
+.admin-card h4 {
+  margin-bottom: 1rem;
+}
+.admin-card-content {
+  display: flex;
+  flex-direction: column;
+}
+.admin-card-options {
+  background: var(--green);
+  padding: 1rem 0;
+  border-radius: 10rem;
+  margin-top: 1rem;
+}
+.admin-card-options i {
+  font-size: 16px;
+  margin: 0 .5rem;
+}
+
 /* Forms */
 form input {
     background-color: transparent;

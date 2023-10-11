@@ -39,37 +39,42 @@
 
       <!-- WEBSITE PROJECTS -->
       <div class="website-section">
-        <div class="website-section-item">
           {% if projects %}
+          <hr>
+          <div class="website-section-item">
 
-            <table>
-              <tr id="top">
-                <th><h4>Project Name</h4></th>
-                <th><h4>Client</h4></th>
-                <th><h4>Company</h4></th>
-                <th><h4>Services</h4></th>
-                <th><h4>Manage</h4></th>
-              </tr>
+            {% for p in projects %}
+              <div class="admin-card">
 
-              {% for p in projects %}
-                <tr>
-                  <td><p>{{ p.project_name }}</p></td>
-                  <td><p>{{ p.client }}</p></td>
-                  <td><p>{{ p.company }}</p></td>
-                  <td><p>{{ p.service }}</p></td>
-                  <td>
+
+                <!-- Delete Popup -->
+                <!-- <div class="trash-popup-container" id="trash-popup">
+                  <div class="trash-popup-content">
+                    <p>Are you sure you want to delete {{ c.company_name }}</p>
+                    <button class="dashboard-btn" onclick="closePopup()">No</button>
+                    <a href="/admin/delete-client/{{ c.id }}">
+                      <button class="dashboard-btn">Yes</button>
+                    </a>
+                  </div>
+                </div> -->
+
+                <div class="admin-card-content">
+                  <h4>{{ p.project_name }}</h4>
+                  <p><strong>Description: </strong>{{ p.description }}</p>
+                  <p><strong>Service: </strong>{{ p.service }}</p>
+                  <div class="admin-card-options">
                     <i class="fas fa-clipboard"></i>
                     <i class="fas fa-cog"></i>
-                    <a href="/admin/delete-project/{{ p.id }}"><i class="fas trash fa-trash-alt"></a></i>
-                  </td>
-                </tr>
-              {% endfor %}
-              
-            </table> 
-
-          {% else %}
-            <p>No projects</p>
-          {% endif %}
+                    <i class="fas trash fa-trash-alt" onclick="openPopup()"></i>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+                
+          </div>
+        {% else %}
+          <p>No clients</p>
+        {% endif %}
         </div>
       </div>
   
