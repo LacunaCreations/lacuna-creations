@@ -15,3 +15,5 @@ OCT 1 2023
 OCT 05 2023
   - Making progress... We really need a base website design to get our name out there. The dashboard is pretty bad ass though if I do say so myself!
   
+OCT 11 2023 
+  - I've been learning a lot about CSS variables and just how much we can do with them. With that said, I wand to standardize padding and margin to elements that will require padding and margin. Forget about Bootstrap. This is custom. Just how I like it.
