@@ -61,31 +61,6 @@
     margin: 0 .5rem;
 }
 
-/* Delete Popup */
-.trash-popup-container {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    justify-content: center;
-    
-    background: rgba(255, 255, 255, 0);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
-
-    width: 100%;
-    min-height: 100%;
-}
-.trash-popup-content {
-    background: var(--black);
-    padding: 2rem;
-    border-radius: 1rem;
-    height: 100%;
-    margin-top: 5rem;
-}
 /* Create Client Form */
 .create-project-form {
     margin-top: 2rem;

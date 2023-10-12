@@ -47,16 +47,16 @@
               <div class="admin-card">
 
 
-                <!-- Delete Popup -->
-                <!-- <div class="trash-popup-container" id="trash-popup">
+                <!-- delete project popup -->
+                <div class="trash-popup-container" id="trash-popup">
                   <div class="trash-popup-content">
-                    <p>Are you sure you want to delete {{ c.company_name }}</p>
+                    <p>Are you sure you want to delete {{ p.project_name }}</p>
                     <button class="dashboard-btn" onclick="closePopup()">No</button>
-                    <a href="/admin/delete-client/{{ c.id }}">
+                    <a href="/admin/delete-project/{{ p.id }}">
                       <button class="dashboard-btn">Yes</button>
                     </a>
                   </div>
-                </div> -->
+                </div>
 
                 <div class="admin-card-content">
                   <h4>{{ p.project_name }}</h4>
@@ -83,4 +83,17 @@
   </div>
 
 </body>
+
+<!-- javascript -->
+<script>
+  function openPopup() {
+    var popup = document.getElementById('trash-popup')
+    popup.style.display = 'flex';
+  }
+  function closePopup() {
+    var popup = document.getElementById('trash-popup')
+    popup.style.display = 'none';
+  }
+</script>
+
 </html>
