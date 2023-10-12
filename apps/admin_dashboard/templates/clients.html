@@ -49,10 +49,10 @@
 
 
                 <!-- Delete Popup -->
-                <div class="trash-popup-container" id="trash-popup">
+                <div class="trash-popup-container" id="trash-popup-{{c.id}}">
                   <div class="trash-popup-content">
                     <p>Are you sure you want to delete {{ c.company_name }}</p>
-                    <button class="dashboard-btn" onclick="closePopup()">No</button>
+                    <button class="dashboard-btn" id="{{ c.id }}" onclick="closePopup(id)">No</button>
                     <a href="/admin/delete-client/{{ c.id }}">
                       <button class="dashboard-btn">Yes</button>
                     </a>
@@ -67,7 +67,7 @@
                   <div class="admin-card-options">
                     <i class="fas fa-clipboard"></i>
                     <i class="fas fa-cog"></i>
-                    <i class="fas trash fa-trash-alt" onclick="openPopup()"></i>
+                    <i class="fas trash fa-trash-alt" id="{{ c.id }}" onclick="openPopup(id)"></i>
                   </div>
                 </div>
               </div>
@@ -85,14 +85,18 @@
 
 </body>
 
+<!-- javascript -->
 <script>
-  function openPopup() {
-    var popup = document.getElementById('trash-popup')
+  function openPopup(id) {
+    var theID = id;
+    var popup = document.getElementById('trash-popup-' + theID)
     popup.style.display = 'flex';
   }
-  function closePopup() {
-    var popup = document.getElementById('trash-popup')
+  function closePopup(id) {
+    var theID = id;
+    var popup = document.getElementById('trash-popup-' + theID)
     popup.style.display = 'none';
   }
 </script>
+
 </html>
