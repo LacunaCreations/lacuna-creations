@@ -123,6 +123,7 @@ class Project(models.Model):
   creator = models.ForeignKey(Administrator, null=True, on_delete=models.CASCADE)
   start_time = models.DateTimeField(auto_now_add = True)
   end_time = models.DateTimeField(auto_now = True)
+  # assignment = models.ManyToManyField(Employee, related_name='asssigned')
 
   objects = ProjectManager()
 
