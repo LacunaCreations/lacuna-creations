@@ -17,3 +17,10 @@ OCT 05 2023
   
 OCT 11 2023 
   - I've been learning a lot about CSS variables and just how much we can do with them. With that said, I wand to standardize padding and margin to elements that will require padding and margin. Forget about Bootstrap. This is custom. Just how I like it.
+
+OCT 12 2023
+  - I want to be able to assign projects to users. Let's get it done...
+
+
+
+

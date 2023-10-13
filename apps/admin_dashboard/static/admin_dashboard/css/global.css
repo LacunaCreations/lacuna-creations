@@ -71,14 +71,14 @@ body {
 
 /* Text */
 h1 {
-  font-family: var(--abril-fatface);
+  font-family: var(--source-code);
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: var(--step-4);
 }
 h2 {
-  font-family: var(--abril-fatface);
+  font-family: var(--source-code);
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
