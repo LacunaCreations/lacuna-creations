@@ -17,13 +17,13 @@
   <!-- CSS Animations v4.1.1 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   
-  <title>Lacuna Creations | Simple Development Solutions</title>  
+  <title>Lacuna Creations | Web Solutions</title>  
 
 </head>
 <body>
   <div class="home-container">
 
-    <!-- MENU -->
+    <!-- menu -->
     {% include 'page_items/menu.html' %}
 
     {% if messages %}
@@ -35,58 +35,35 @@
       {% endfor %}
     {% endif %}
 
-    <!-- MAIN SLIDER -->
+    <!-- hero -->
     <div class="hero-container">
       <div class="hero-content container">
-
-        <div class="hero-left">
-          <p>Personalized. Organized. Simple.</p>
-          <h1>Web Solutions</h1>
-          <div class="hero-btns">
-            <a href="">
-              <button class="btn-primary">Services</button>
-            </a>
-            <a href="">
-              <button class="btn-primary">Contact</button>
-            </a>
-          </div>
-        </div>
-        <div class="hero-right">
-          
-        </div>
 
       </div>
     </div>
   
     <div class="h-border"></div>
 
+    <!-- subhero -->
     <div class="subhero-container">
       <div class="subhero-content container">
-
-        <div class="hp-subhero-text">
-          <h2>What We Do</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel atque tempore magnam! Eos et qui eaque labore minus, animi consectetur sit consequatur illum maxime. Quo culpa molestiae soluta ad cum.</p>
-        </div>
-
-        <div class="hp-subhero-order animate__backInRight animate__delay-2s">
-          <p>design</p>
-          <i class="fas fa-long-arrow-alt-right"></i>
-          <p>develop</p>
-          <i class="fas fa-long-arrow-alt-right"></i>
-          <p>deploy</p>
-          <i class="fas fa-long-arrow-alt-right"></i>
-          <p>manage</p>
-        </div>
 
       </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- services -->
+    <div class="services-container">
+      <div class="services-content container">
+
+      </div>
+    </div>
+
+    <!-- footer -->
     {% include 'page_items/footer.html' %}
 
   </div>
 
-  <!-- SCRIPTS -->
+  <!-- scripts -->
   <script src="{% static 'base_website/js/global.js' %}"></script>
 
 </body>
