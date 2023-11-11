@@ -21,6 +21,8 @@ OCT 11 2023
 OCT 12 2023
   - I want to be able to assign projects to users. Let's get it done...
 
+NOV 10 2023 
+  - Really need to work on the client facing side of the website. Hopefully new design soon. 
 
 
 
