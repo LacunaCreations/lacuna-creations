@@ -24,5 +24,6 @@ OCT 12 2023
 NOV 10 2023 
   - Really need to work on the client facing side of the website. Hopefully new design soon. 
 
-
+DEC 16 2023
+  - It is time to get serious about the frontend. Architect type design coming in hot. It's going to be bad ass!
 
