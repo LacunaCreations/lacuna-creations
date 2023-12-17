@@ -1,5 +1,10 @@
-/* FONT IMPORTS */
+/* font imports */
+/* Abril */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Afacad */
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+/* Lexend */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   /* colors */
@@ -34,6 +39,12 @@ font-family: 'Source Code Pro', monospace;
 Abril Fatface
 font-family: 'Abril Fatface', cursive;
 
+Afacad
+font-family: 'Afacad', sans-serif;
+
+Lexend
+font-family: 'Lexend', sans-serif;
+
 ====================================== */
 
 /* ====================================== */
@@ -56,11 +67,16 @@ body {
 
 /* Text */
 h1 {
-  font-family: 'Source Code Pro', monospace;
-  font-weight: 800;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
   letter-spacing: 2px;
+  line-height: 4rem;
   text-transform: uppercase;
-  font-size: var(--step-4);
+  font-size: var(--step-5);
+}
+.h1-special {
+  font-size: 8rem !important;
+  line-height: 7rem !important;
 }
 h2 {
   font-family: 'Source Code Pro', monospace;
@@ -81,6 +97,9 @@ p {
   font-family: 'Source Code Pro', monospace;
   font-size: var(--step--1);
 }
+.p-special {
+  font-size: var(--step-1);
+}
 a {
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
@@ -94,20 +113,17 @@ i {
 .btn-primary {
   font-family: 'Source Code Pro', monospace;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--black);
   border: none;
   padding: 1rem 2rem;
-
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2.8px);
-  -webkit-backdrop-filter: blur(2.8px);
-  border-radius: 10rem;
+  width: auto !important;
+  background: var(--white);
 
   transition: .2s;
 }
 .btn-primary:hover {
   background: var(--blue);
+  color: var(--white);
   cursor: pointer;
   transition: .2s;
 }
