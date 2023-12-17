@@ -1,3 +1,7 @@
+.home-container {
+    overflow: hidden !important;
+}
+
 /* ====================================== */
 /* hero */
 /* ====================================== */
@@ -45,8 +49,21 @@
 .hp-about-copy {
     margin: 5rem 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     column-gap: 5rem;
+}
+.hp-about-left h2 {
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.hp-about-right img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+.hp-about-right .h1-special {
+    margin-top: -10rem;
 }
 
 

@@ -95,7 +95,7 @@ h4 {
 }
 p {
   font-family: 'Source Code Pro', monospace;
-  font-size: var(--step--1);
+  font-size: var(--step-0);
 }
 .p-special {
   font-size: var(--step-1);
@@ -103,10 +103,10 @@ p {
 a {
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
-  font-size: var(--step--1);
+  font-size: var(--step-0);
 }
 i {
-  font-size: var(--step-1);
+  font-size: var(--step--0);
 }
 
 /* Buttons */
