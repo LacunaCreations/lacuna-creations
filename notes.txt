@@ -27,3 +27,5 @@ NOV 10 2023
 DEC 16 2023
   - It is time to get serious about the frontend. Architect type design coming in hot. It's going to be bad ass!
 
+MAR 16 12024
+  - New year new us. Let's get this thing deployed and running correctly. No more messing around.
