@@ -29,3 +29,60 @@ DEC 16 2023
 
 MAR 16 12024
   - New year new us. Let's get this thing deployed and running correctly. No more messing around.
+
+
+[program:gunicorn]
+		directory=/home/ubuntu/lacuna-creations
+		command=/home/ubuntu/env/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/lacuna-creations/app.sock lacuna_creations.wsgi:application
+		autostart=true
+		autorestart=true
+		stderr_logfile=/var/log/gunicorn/gunicorn.err.log
+		stdout_logfile=/var/log/gunicorn/gunicorn.out.log
+		
+		[group:guni]
+		programs:gunicorn
+		
+		Sample django.conf:
+		
+		server{
+			listen 80;
+			server_name ;
+			location / {
+				include proxy_params;
+				proxy_pass http://unix:/home/ubuntu/lacuna-creations/app.sock;
+			}
+		
+		}
+    \
+
+[program:gunicorn]
+directory=/home/ubuntu/lacuna-creations
+command=/home/ubuntu/lacunaEnv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/lacuna-creations/lacuna_creations/app.sock myblog.wsgi:application  
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/gunicorn/gunicorn.err.log
+stdout_logfile=/var/log/gunicorn/gunicorn.out.log
+
+[group:guni]
+programs:gunicorn
+
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/lacuna-creations
+ExecStart=gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+lacuna_creations.wsgi.application  
+
+[Install]
+WantedBy=multi-user.target
+
+    
